@@ -29,7 +29,7 @@ function CatchErr() {
   if (hasRequestCompleted == false) {
     // In the 1 second given, XMLHttpRequest did not resolve.
     console.warn('serious bullshit is afoot');
-    document.getElementById('postdiv').innerHTML = "<p>FATAL ERROR! If you are testing code, remember to use <code>localhost</code> or else the HTTP(S) request will fail.</p>";
+    document.getElementById('postdiv').innerHTML = "<p>FATAL ERROR! If you are testing code, remember to use <code>localhost</code> or else the HTTP(S) request will fail.</p> <p>If you are a user, this may occur when it is taking too long. If you think your connection just needs more time, wait a few seconds. If it still does not load, refresh the page, or try again later.</p>";
   } else if(reqcode !== 200) {
     console.warn("There is an error code of " + reqcode);
   } else {
